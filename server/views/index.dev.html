@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>Boilerplate</title>
+	<!-- build:css assets/css/bundle.min.css -->
+	<link rel="stylesheet" href="mcmarveluniverse/bower_components/bootstrap-css/css/bootstrap.min.css" />
+    <link href="mcmarveluniverse/assets/css/site.css" rel="stylesheet">
+	<!-- endbuild -->
+</head>
+<body ng-app="app">
+<!--<div ui-view ng-cloak></div>-->
+<div id="wrapper">
+	<sidebar></sidebar>
+	<div ui-view id="page-content-wrapper" ng-cloak></div>
+</div>
+<div ui-view="footer"></div>
+<script>cl = function() { return console.log.apply( console, arguments ); };</script>
+<!-- build:js assets/js/bundle.min.js -->
+	<script src="mcmarveluniverse/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/lodash/lodash.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/bootstrap-css/js/bootstrap.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/angular/angular.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/angular-route/angular-route.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/angular-messages/angular-messages.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/restangular/dist/restangular.min.js"></script>
+	<script src="mcmarveluniverse/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<!--core JS files -->
+	<script src="mcmarveluniverse/app/app.js"></script>
+	<script src="mcmarveluniverse/app/core/core.js"></script>
+	<script src="mcmarveluniverse/app/core/configs/config.js"></script>
+	<!-- services -->
+	<script src="mcmarveluniverse/app/services/sidebar.service.js"></script>
+	<!-- default routes -->
+	<script src="mcmarveluniverse/app/routes/default/default.js"></script>
+	<script src="mcmarveluniverse/app/routes/default/default.controller.js"></script>
+	<script src="mcmarveluniverse/app/routes/default/default.route.js"></script>
+	<!-- directives -->
+	<script src="mcmarveluniverse/app/components/gist.directive.js"></script>
+    <script src="mcmarveluniverse/app/components/sidebar/sidebar.directive.js"></script>
+
+
+<!-- endbuild -->
+</body></html>
