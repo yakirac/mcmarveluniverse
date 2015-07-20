@@ -30,6 +30,8 @@
 	}
 	//the controller
 	function fnController(){
-
+		var vm = this;
+		vm.showImage = false;
+		vm.showPlaceholder = true;
 	}
 })();
