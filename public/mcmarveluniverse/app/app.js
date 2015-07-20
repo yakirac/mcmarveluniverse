@@ -2,7 +2,7 @@
 	'use strict';
 	angular.module('app', [
 	// angular modules
-	'ngAnimate', 'ngMessages', 'ngRoute',
+	'ngAnimate', 'ngMessages', 'ngRoute', 'ngHolder',
 	// 3rd party modules
 	'ui.router', 'restangular', 'ui.bootstrap.tabs', 'ui.bootstrap.tpls', 'gist',
 	// app modules

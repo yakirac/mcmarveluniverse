@@ -43,7 +43,7 @@ body{
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
+    padding: 15px 15px 90px;
 	margin-bottom: 50px;
 }
 
@@ -57,11 +57,16 @@ characters .csnippet {
 	padding-left: 0;
 	padding-right: 0;
 	background-color: #5a5a5a;
+	opacity: .5;
+}
+
+characters .csnippet:hover {
+	opacity: 1;
 }
 
 
 footer{
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	height: 50px;
