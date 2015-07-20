@@ -33,5 +33,19 @@
 		var vm = this;
 		vm.showImage = false;
 		vm.showPlaceholder = true;
+		vm.showHeroImage = showHeroImage;
+		vm.hideHeroImage = hideHeroImage;
+
+		function showHeroImage(){
+			cl( 'Showing' );
+			vm.showImage = true;
+			vm.showPlaceholder = false;
+		};
+
+		function hideHeroImage(){
+			cl( 'Hiding' );
+			vm.showImage = false;
+			vm.showPlaceholder = true;
+		};
 	}
 })();

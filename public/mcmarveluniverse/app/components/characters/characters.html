@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="csnippet col-xs-8 col-lg-3">
+        <div class="csnippet col-xs-8 col-lg-3" ng-mouseenter="vm.showHeroImage()" ng-mouseleave="vm.hideHeroImage()">
             <img holder="holder.js/293x210?text=Black Widow&theme=vine" style="height: 210px; width: 100%; display: block;" ng-hide="vm.showImage">
             <img src="" style="height: 210px; width: 100%; display: block;" ng-show="vm.showImage">
             <!--<h3>Black Widow</h3>-->
