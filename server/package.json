@@ -1,10 +1,10 @@
 {
-  "name": "node-express-angular-boilerplate",
+  "name": "mcmarveluniverse",
   "version": "1.0.0",
-  "description": "Node/Express/Angular Boilerplate Code",
+  "description": "MC Marvel Universe",
   "main": "app.js",
   "author": {
-    "name": "Josh Gonzalez"
+    "name": "Yakira C. Bristol"
   },
   "scripts": {
     "start": "node app.js",

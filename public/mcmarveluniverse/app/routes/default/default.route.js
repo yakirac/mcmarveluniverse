@@ -8,7 +8,7 @@
 			url: "/",
 			templateUrl: "mcmarveluniverse/app/routes/default/default.html",
 			controller: "defaultController",
-			controllerAs: "vm"
+			controllerAs: "defController"
 		});
 	}
 }());

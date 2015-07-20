@@ -7,7 +7,7 @@
 	// Server settings
 	config.server = {
 		host: "0.0.0.0",
-		port: process.env.NODE_PORT || process.env.PORT || 3000
+		port: process.env.NODE_PORT || process.env.PORT || 3400
 	};
 	//live reload
 	config.live_reload = {

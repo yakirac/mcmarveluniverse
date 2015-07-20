@@ -18,5 +18,5 @@
 		});
 		return;
 	}
-	angular.module("app.core").config(["$urlRouterProvider", "RestangularProvider", "SERVER_API_URL", onConfig]).run(["$rootScope", "$location", onRun]).constant("SERVER_API_URL", "http://localhost:3000");
+	angular.module("app.core").config(["$urlRouterProvider", "RestangularProvider", "SERVER_API_URL", onConfig]).run(["$rootScope", "$location", onRun]).constant("SERVER_API_URL", "http://localhost:3400");
 }());
