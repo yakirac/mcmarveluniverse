@@ -31,21 +31,58 @@
 	//the controller
 	function fnController(){
 		var vm = this;
-		vm.showImage = false;
-		vm.showPlaceholder = true;
-		vm.showHeroImage = showHeroImage;
-		vm.hideHeroImage = hideHeroImage;
 
-		function showHeroImage(){
-			cl( 'Showing' );
-			vm.showImage = true;
-			vm.showPlaceholder = false;
-		};
-
-		function hideHeroImage(){
-			cl( 'Hiding' );
-			vm.showImage = false;
-			vm.showPlaceholder = true;
-		};
+		vm.heros = [
+		    {
+		        name : 'Black Widow',
+		        holderImage : 'holder.js/293x210?text=Black Widow&theme=vine',
+		        image : ''
+		    },
+		    {
+		        name : 'Chores Macgillicudy',
+		        holderImage : 'holder.js/293x210?text=Chores Macgillicudy',
+		        image : ''
+		    },
+		    {
+		        name : 'Daredevil',
+		        holderImage : 'holder.js/293x210?text=Daredevil&theme=vine',
+		        image : ''
+		    },
+		    {
+		        name : 'Deadpool',
+		        holderImage : 'holder.js/293x210?text=Deadpool',
+		        image : ''
+		    },
+		    {
+		        name : 'Gambit',
+		        holderImage : 'holder.js/293x210?text=Gambit',
+		        image : ''
+		    },
+		    {
+		        name : 'Hulk',
+		        holderImage : 'holder.js/293x210?text=Hulk&theme=vine',
+		        image : ''
+		    },
+		    {
+		        name : 'Lego Iron Man',
+		        holderImage : 'holder.js/293x210?text=Lego Iron Man',
+		        image : ''
+		    },
+		    {
+		        name : 'Punisher',
+		        holderImage : 'holder.js/293x210?text=Punisher&theme=vine',
+		        image : ''
+		    },
+		    {
+		        name : 'Silver Samurai',
+		        holderImage : 'holder.js/293x210?text=Silver Samurai&theme=vine',
+		        image : ''
+		    },
+		    {
+		        name : 'Wasp',
+		        holderImage : 'holder.js/293x210?text=Wasp',
+		        image : ''
+		    }
+		];
 	}
 })();
