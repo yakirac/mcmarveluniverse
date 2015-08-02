@@ -10,14 +10,14 @@
 	* this will output the global header
 	*
 	*/
-	angular.module( 'app.core' ).directive( "characters", fnDirective );
+	angular.module( 'app.core' ).directive( "characters", [ fnDirective ] );
 	/**
 	 * @ngdoc controller
 	 * @name fnController
 	 * @description
 	 * This is the controller for this header
 	 */
-	angular.module("app.core").controller("charactersController", [fnController]);
+	angular.module("app.core").controller( "charactersController", [ "heroService", fnController ] );
 	//the directive
 	function fnDirective(){
 		return{
@@ -29,60 +29,15 @@
 		};
 	}
 	//the controller
-	function fnController(){
+	function fnController( heroService ){
 		var vm = this;
 
-		vm.heros = [
-		    {
-		        name : 'Black Widow',
-		        holderImage : 'holder.js/293x210?text=Black Widow&theme=vine',
-		        image : ''
-		    },
-		    {
-		        name : 'Chores Macgillicudy',
-		        holderImage : 'holder.js/293x210?text=Chores Macgillicudy',
-		        image : ''
-		    },
-		    {
-		        name : 'Daredevil',
-		        holderImage : 'holder.js/293x210?text=Daredevil&theme=vine',
-		        image : ''
-		    },
-		    {
-		        name : 'Deadpool',
-		        holderImage : 'holder.js/293x210?text=Deadpool',
-		        image : ''
-		    },
-		    {
-		        name : 'Gambit',
-		        holderImage : 'holder.js/293x210?text=Gambit',
-		        image : ''
-		    },
-		    {
-		        name : 'Hulk',
-		        holderImage : 'holder.js/293x210?text=Hulk&theme=vine',
-		        image : ''
-		    },
-		    {
-		        name : 'Lego Iron Man',
-		        holderImage : 'holder.js/293x210?text=Lego Iron Man',
-		        image : ''
-		    },
-		    {
-		        name : 'Punisher',
-		        holderImage : 'holder.js/293x210?text=Punisher&theme=vine',
-		        image : ''
-		    },
-		    {
-		        name : 'Silver Samurai',
-		        holderImage : 'holder.js/293x210?text=Silver Samurai&theme=vine',
-		        image : ''
-		    },
-		    {
-		        name : 'Wasp',
-		        holderImage : 'holder.js/293x210?text=Wasp',
-		        image : ''
-		    }
-		];
+		vm.heros = [];
+		heroService.getHeros().then(function( data ){
+			vm.heros = data.data;
+			//cl( vm.heros );
+		}, function( error ){
+			cl( error );
+		});
 	}
 })();

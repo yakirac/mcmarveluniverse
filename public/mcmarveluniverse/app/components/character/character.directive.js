@@ -10,14 +10,14 @@
 	* this will output the global header
 	*
 	*/
-	angular.module( 'app.core' ).directive( "character", fnDirective );
+	angular.module( 'app.core' ).directive( "character", [ fnDirective ] );
 	/**
 	 * @ngdoc controller
 	 * @name fnController
 	 * @description
 	 * This is the controller for this header
 	 */
-	angular.module("app.core").controller("characterController", ['$scope', fnController]);
+	angular.module("app.core").controller( "characterController", [ "$scope", "heroService", fnController ] );
 	//the directive
 	function fnDirective(){
 		return{
@@ -30,7 +30,7 @@
 		};
 	}
 	//the controller
-	function fnController( $scope ){
+	function fnController( $scope, heroService ){
 		var vm = this;
 		vm.hero = $scope.hero;
 		vm.showImage = false;
@@ -39,13 +39,13 @@
 		vm.hideHeroImage = hideHeroImage;
 
 		function showHeroImage(){
-			cl( 'Showing' );
+			//cl( 'Showing' );
 			vm.showImage = true;
 			vm.showPlaceholder = false;
 		};
 
 		function hideHeroImage(){
-			cl( 'Hiding' );
+			//cl( 'Hiding' );
 			vm.showImage = false;
 			vm.showPlaceholder = true;
 		};
