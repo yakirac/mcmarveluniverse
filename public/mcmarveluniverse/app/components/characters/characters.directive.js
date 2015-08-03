@@ -2,12 +2,12 @@
 	'use strict';
 	/**
 	* @ngdoc directive
-	* @name global.directive:header.directive
+	* @name global.directive:characters.directive
 	* @scope
 	* @restrict E
 	*
 	* @description
-	* this will output the global header
+	* this will output a list of characters
 	*
 	*/
 	angular.module( 'app.core' ).directive( "characters", [ fnDirective ] );
@@ -15,7 +15,7 @@
 	 * @ngdoc controller
 	 * @name fnController
 	 * @description
-	 * This is the controller for this header
+	 * This is the controller for this directive
 	 */
 	angular.module("app.core").controller( "charactersController", [ "heroService", fnController ] );
 	//the directive

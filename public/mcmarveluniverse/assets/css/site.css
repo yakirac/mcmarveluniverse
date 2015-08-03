@@ -78,6 +78,14 @@ characters .csnippet h3 {
 	width: 100%;
 }
 
+div.hero-data{
+	padding: 20px;
+}
+
+h2.cmodal-alias, h5.cmodal-fullname{
+	padding-left:20px;
+}
+
 
 footer{
 	bottom: 0;
