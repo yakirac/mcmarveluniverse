@@ -53,7 +53,7 @@
 
 		function showHeroInfoModal(){
 			var modalInstance = $modal.open({
-		      animation: true,
+		      animation: false,
 		      templateUrl: "mcmarveluniverse/app/components/character/charactermodal.html",
 			  controller: 'characterModalController',
 		      size: 'lg',
