@@ -17,7 +17,7 @@
 	 * @description
 	 * This is the controller for this directive
 	 */
-	angular.module("app.core").controller( "charactersController", [ "heroService", fnController ] );
+	angular.module("app.core").controller( "charactersController", [ "$scope", "heroService", fnController ] );
 	//the directive
 	function fnDirective(){
 		return{
@@ -29,8 +29,11 @@
 		};
 	}
 	//the controller
-	function fnController( heroService ){
+	function fnController( $scope, heroService ){
 		var vm = this;
+
+		vm.sh = false;
+		vm.hero = '';
 
 		vm.heros = [];
 		heroService.getHeros().then(function( data ){
@@ -39,5 +42,12 @@
 		}, function( error ){
 			cl( error );
 		});
+
+		vm.showHeroInfoModal = function( hero )
+		{
+			//cl( hero );
+			vm.sh = true;
+			vm.hero = hero;
+		};
 	}
 })();

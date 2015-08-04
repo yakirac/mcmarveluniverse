@@ -17,7 +17,7 @@
 	 * @description
 	 * This is the controller for a character
 	 */
-	angular.module("app.core").controller( "characterController", [ "$scope", "heroService", "$modal", fnController ] );
+	angular.module("app.core").controller( "characterController", [ "$scope", "heroService", fnController ] );
 	//the directive
 	function fnDirective(){
 		return{
@@ -30,7 +30,7 @@
 		};
 	}
 	//the controller
-	function fnController( $scope, heroService, $modal ){
+	function fnController( $scope, heroService ){
 		var vm = this;
 		vm.hero = $scope.hero;
 		vm.showImage = false;
@@ -51,27 +51,8 @@
 			vm.showPlaceholder = true;
 		}
 
-		function showHeroInfoModal(){
-			var modalInstance = $modal.open({
-		      animation: false,
-		      templateUrl: "mcmarveluniverse/app/components/character/charactermodal.html",
-			  controller: 'characterModalController',
-		      size: 'lg',
-		      resolve: {
-				  hero : function(){
-					  return vm.hero;
-				  }
-			  }
-		  });
+		function showHeroInfoModal( hero ){
+			$scope.$parent.vm.showHeroInfoModal( hero );
 		}
-	}
-	angular.module("app.core").controller( "characterModalController", [ "$scope", "$modalInstance", "hero", fnModalController ] );
-
-	function fnModalController( $scope, $modalInstance, hero ){
-		$scope.hero = hero;
-
-		$scope.cls = function(){
-			$modalInstance.dismiss('cancel');
-		};
 	}
 })();
